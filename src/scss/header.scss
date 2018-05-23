@@ -1,0 +1,35 @@
+@import "./scss/variables";
+@import "./scss/fonts";
+
+body{
+    background: #666;
+}
+.ranking-head{
+    max-width: 374px;
+    height: 188px;
+    position: relative;
+    .ranking-logo{
+        position: absolute;
+    }
+    .ranking-title-wrapper{
+        display: inline-block;
+        background: $white;
+        width: 80%;
+        text-align: right;
+        padding-right: 33px;
+        margin-top: 96px;
+        box-sizing: border-box;
+        border-radius: 3px;
+        margin-left: 75px;
+
+        .ranking-title{
+            color: $title-color;
+            font: {
+                family: $font-bold;
+                size: $title-size;
+                weight: bold;
+            } 
+                  
+        }
+    }
+} 

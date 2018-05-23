@@ -1,0 +1,71 @@
+@import "./scss/fonts";
+@import "./scss/variables";
+
+.ranking-tooltip {
+    position: absolute;
+    right: -190px;
+    top: 20px;
+    display: none;
+
+    &::before{
+        content: "";
+            width: 0;
+            height: 0;
+            border-top: 8px solid transparent;
+            border-bottom: 10px solid transparent;
+            border-right: 10px solid $white;
+            position: absolute;
+            top: 30px;
+            left: -10px;
+            transition: 0.5s;
+    }
+    .tooltip-header {
+        background: $detail-color;
+        border-top-left-radius: 3px;
+        border-top-right-radius: 3px;
+        padding: 0 15px;
+        .tooltip-title {
+            margin: 0;
+            display: inline-block;
+            font-family: $font-bold;
+            font-size: 10px;
+            color: $white;
+
+            &:first-child {
+                border-right: 2px double $transparency;
+                padding-right: 13px;
+                line-height: 30px;
+                vertical-align: middle;
+            }
+
+            &:last-child{
+                padding-left: 9px;
+            }
+
+            
+        }
+    }
+    .tooltip-content {
+        background: $white;
+        border-bottom-left-radius: 3px;
+        border-bottom-right-radius: 3px;
+        .tooltip-percent {
+            display: inline-block;
+            padding: 4px 10.5px;
+            font-family: $font-bold;
+            color: $grey-2;
+            font-size: $tooltip-text;
+            min-width: 53px;
+
+            &:first-child {
+                border-right: 2px double rgba(140, 139, 139, 0.28);
+                padding-right: 10px;
+                line-height: 30px;
+            }
+
+            &:last-child {
+                margin-left: 10px;
+            }
+        }
+    }
+} 
